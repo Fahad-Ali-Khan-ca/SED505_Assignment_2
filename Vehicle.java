@@ -1,58 +1,5 @@
 public class Vehicle {
-    private double fuelEfficiency; // in km/L
-    private double fuelCapacity; // in L
-    private double currentFuelLevel; // in L
-    private double distanceTraveled; // in km
-    private double travelTime; // in hours
-
-    public Vehicle(double fuelEfficiency, double fuelCapacity) {
-        this.fuelEfficiency = fuelEfficiency;
-        this.fuelCapacity = fuelCapacity;
-        this.currentFuelLevel = fuelCapacity;
-        this.distanceTraveled = 0;
-        this.travelTime = 0;
-    }
-
-    public double getFuelEfficiency() {
-        return fuelEfficiency;
-    }
-
-    public double getFuelCapacity() {
-        return fuelCapacity;
-    }
-
-    public double getCurrentFuelLevel() {
-        return currentFuelLevel;
-    }
-
-    public double getDistanceTraveled() {
-        return distanceTraveled;
-    }
-
-    public double getTravelTime() {
-        return travelTime;
-    }
-
-    public void drive(double distance) {
-        double fuelNeeded = distance / fuelEfficiency;
-        if (fuelNeeded > currentFuelLevel) {
-            distanceTraveled += currentFuelLevel * fuelEfficiency;
-            travelTime += currentFuelLevel * fuelEfficiency / distance;
-            currentFuelLevel = 0;
-        } else {
-            distanceTraveled += distance;
-            travelTime += distance / fuelEfficiency;
-            currentFuelLevel -= fuelNeeded;
-        }
-    }
-
-    public void refuel(double fuelAmount) {
-        if (currentFuelLevel + fuelAmount > fuelCapacity) {
-            currentFuelLevel = fuelCapacity;
-        } else {
-            currentFuelLevel += fuelAmount;
-        }
-    }
+    // Complete the class
 }
 
 public class VehicleUtility {
