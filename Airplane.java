@@ -1,3 +1,5 @@
+//Created M.Watler
+//Legacy code for Airplane
 public class Airplane {
     private static final double CAPACITY = 100000.0; // 100000L of fuel
     private static final double FUEL_CONSUMPTION = 5400.0; // 5400L/hour
@@ -39,7 +41,7 @@ public class Airplane {
         double maxTime = fuel / FUEL_CONSUMPTION;
         if (maxTime < time) {
             double maxDistance = maxTime * SPEED;
-            System.out.println("Not enough fuel to travel " + distance + "km. Travelling " + maxDistance + "km instead.");
+            System.out.println("Not enough fuel to travel " + String.format("%.2f", distance) + "km. Travelling " + String.format("%.2f", maxDistance) + "km instead.");
             totalDistance += maxDistance;
             fuel = 0.0;
         } else {
