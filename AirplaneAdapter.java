@@ -1,4 +1,4 @@
-public class AirplaneAdapter extends Vehicle {
+public class AirplaneAdapter implements Vehicle {
     private Airplane airplane;
 
     public AirplaneAdapter(Airplane airplane) {
@@ -11,12 +11,12 @@ public class AirplaneAdapter extends Vehicle {
     }
 
     @Override
-    public double getDistance() {
+    public double getTravelDistance() {
         return airplane.getAirplaneDistance();
     }
 
     @Override
-    public double getTime() {
+    public double getTravelTime() {
         return airplane.getAirplaneTime();
     }
 

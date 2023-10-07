@@ -1,4 +1,4 @@
-public class CarAdapter extends Vehicle {
+public class CarAdapter implements Vehicle {
     private Car car;
 
     public CarAdapter(Car car) {
@@ -11,12 +11,12 @@ public class CarAdapter extends Vehicle {
     }
 
     @Override
-    public double getDistance() {
+    public double getTravelDistance() {
         return car.getCarDistance();
     }
 
     @Override
-    public double getTime() {
+    public double getTravelTime() {
         return car.getCarTime();
     }
 
