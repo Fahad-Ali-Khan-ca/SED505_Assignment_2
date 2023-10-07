@@ -1,4 +1,6 @@
-
+//Created M.Watler
+//TravelSimulation class that runs the entire program
+//Modified: Fahad Ali Khan, Inderpreet Parmar
 
 class TravelSimulation {
     public static void main(String[] args) {
