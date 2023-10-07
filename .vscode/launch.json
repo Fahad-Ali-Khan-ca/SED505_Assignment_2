@@ -2,6 +2,13 @@
   "version": "0.2.0",
   "configurations": [
     {
+      "type": "java",
+      "name": "TravelSimulation",
+      "request": "launch",
+      "mainClass": "TravelSimulation",
+      "projectName": "SED505_Assignment_2_bf040e41"
+    },
+    {
       "name": "C/C++ Runner: Debug Session",
       "type": "cppdbg",
       "request": "launch",

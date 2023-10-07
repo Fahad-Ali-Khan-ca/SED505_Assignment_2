@@ -1,38 +1,51 @@
+
+
 class TravelSimulation {
     public static void main(String[] args) {
+
+        // Create instances of the legacy vehicle classes
+        Boat boat = new Boat();
+        Car car = new Car();
+        Airplane airplane = new Airplane();
+
+        // Create adapters for each vehicle
+        Vehicle boatAdapter = new BoatAdapter(boat);
+        Vehicle carAdapter = new CarAdapter(car);
+        Vehicle airplaneAdapter = new AirplaneAdapter(airplane);
+
         // the boat travels 100km and information about the boat is printed
-        boat.boatTravel(100.0);
-        printVehicleInformation(boat, "Boat");
+        boatAdapter.travel(100.0);
+        VehicleUtility.printVehicleInformation(boatAdapter, "Boat");
 
         // the car travels 1000km and information about the car is printed
-        car.carTravel(1000.0);
-        printVehicleInformation(car, "Car");
+        carAdapter.travel(1000.0);
+        VehicleUtility.printVehicleInformation(carAdapter, "Car");
 
         // the airplane travels 10000km and information about the airplane is printed
-        airplane.airplaneTravel(10000.0);
-        printVehicleInformation(airplane, "Airplane");
+        airplaneAdapter.travel(10000.0);
+        VehicleUtility.printVehicleInformation(airplaneAdapter, "Airplane");
 
         // Add fuel to each
         System.out.println();
         System.out.println("Adding fuel...");
         System.out.println();
 
-        boat.boatAddFuel(120);
-        car.carAddFuel(40);
-        airplane.airplaneAddFuel(50000);
+        boatAdapter.addFuel(120);
+        carAdapter.addFuel(40);
+        airplaneAdapter.addFuel(50000);
 
         // Travel again
         // Boat
-        boat.boatTravel(100.0);
-        printVehicleInformation(boat, "Boat");
+        boatAdapter.travel(100.0);
+        VehicleUtility.printVehicleInformation(boatAdapter, "Boat");
 
         // Car
-        car.carTravel(1000.0);
-        printVehicleInformation(car, "Car");
+        carAdapter.travel(1000.0);
+        VehicleUtility.printVehicleInformation(carAdapter, "Car");
 
         // Airplane
-        airplane.airplaneTravel(10000.0);
-        printVehicleInformation(airplane, "Airplane");
+        airplaneAdapter.travel(10000.0);
+        VehicleUtility.printVehicleInformation(airplaneAdapter, "Airplane");
 
         new java.util.Scanner(System.in).nextLine();
     }

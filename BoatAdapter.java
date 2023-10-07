@@ -1,5 +1,5 @@
 
-class BoatAdapter extends Vehicle {
+class BoatAdapter implements Vehicle {
     private Boat boat;
 
     public BoatAdapter(Boat boat) {
@@ -17,12 +17,12 @@ class BoatAdapter extends Vehicle {
     }
 
     @Override
-    public double getDistance() {
+    public double getTravelDistance() {
         return boat.getBoatDistance();
     }
 
     @Override
-    public double getTime() {
+    public double getTravelTime() {
         return boat.getBoatTime();
     }
 
