@@ -6,6 +6,13 @@
       "name": "TravelSimulation",
       "request": "launch",
       "mainClass": "TravelSimulation",
+      "projectName": "SED505_Assignment_2_37be3118"
+    },
+    {
+      "type": "java",
+      "name": "TravelSimulation",
+      "request": "launch",
+      "mainClass": "TravelSimulation",
       "projectName": "SED505_Assignment_2_bf040e41"
     },
     {
